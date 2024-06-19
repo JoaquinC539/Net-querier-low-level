@@ -14,6 +14,7 @@ public class Querier
                 //var cmd = new NpgsqlCommand("INSERT INTO  myTable (field) VALUES (@p)", connection) // @ represent to be inserted
                 //cmd.Parameters.AddWithValue("p","MyValue") //Insert for prepared statment
                 //var read=cmd.ExecuteNonQuery(); execute for non returning sql statements
+                //var read=cmd.ExecuteReader(); execute for returning sql statements
                 using (var reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
